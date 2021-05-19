@@ -1,0 +1,1465 @@
+---
+GlowToolsVersion: 2020-10-15
+...
+---
+GraphPreLowerHash: 0x5430F06D172A7652
+...
+---
+- NodeOutputName:  'AveragePool_MobilenetV1_Logits_AvgPool_1a_AvgPool__1:0'
+  Min:             0.0
+  Max:             5.01788234710693359375
+  Histogram:       [ 2024, 464, 248, 157, 79, 45, 31, 16, 4, 4 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 554206, 93524, 88790, 138009, 136323, 98079, 38843, 
+                     29648, 20694, 6108 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             20.20085906982421875
+  Histogram:       [ 794411, 337089, 70041, 1747, 494, 262, 134, 32, 9, 
+                     5 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 554206, 93524, 88790, 138009, 136323, 98079, 38843, 
+                     29648, 20694, 6108 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 185724, 55918, 34341, 14835, 5807, 2350, 1042, 463, 
+                     231, 345 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             15.3134403228759765625
+  Histogram:       [ 260751, 35816, 3770, 512, 118, 49, 21, 16, 2, 1 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 185724, 55918, 34341, 14835, 5807, 2350, 1042, 463, 
+                     231, 345 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 208463, 42780, 27418, 12897, 5528, 2291, 993, 396, 
+                     136, 154 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             12.0770854949951171875
+  Histogram:       [ 250488, 40639, 8159, 1454, 229, 59, 18, 3, 4, 3 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 208463, 42780, 27418, 12897, 5528, 2291, 993, 396, 
+                     136, 154 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 183036, 50213, 39236, 17597, 6269, 2377, 1065, 491, 
+                     305, 467 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             15.19689655303955078125
+  Histogram:       [ 259421, 37144, 3559, 653, 164, 62, 26, 14, 8, 5 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 183036, 50213, 39236, 17597, 6269, 2377, 1065, 491, 
+                     305, 467 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 228052, 36565, 21791, 8790, 3465, 1474, 583, 186, 
+                     105, 45 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             7.62828731536865234375
+  Histogram:       [ 238506, 40190, 15407, 4729, 1603, 426, 143, 43, 7, 
+                     2 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 228052, 36565, 21791, 8790, 3465, 1474, 583, 186, 
+                     105, 45 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 45261, 11372, 8916, 7460, 1680, 277, 103, 65, 31, 
+                     99 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 75264, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             17.5522899627685546875
+  Histogram:       [ 65059, 9886, 212, 63, 23, 11, 6, 1, 2, 1 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 75264, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 45261, 11372, 8916, 7460, 1680, 277, 103, 65, 31, 
+                     99 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 122380, 15154, 7833, 3323, 1160, 442, 141, 59, 20, 
+                     16 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             7.27667999267578125
+  Histogram:       [ 126240, 15339, 6268, 1890, 573, 149, 48, 12, 5, 4 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 122380, 15154, 7833, 3323, 1160, 442, 141, 59, 20, 
+                     16 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 107371, 20220, 18109, 3117, 888, 366, 215, 110, 61, 
+                     71 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             9.49285984039306640625
+  Histogram:       [ 118762, 27620, 3175, 605, 228, 77, 33, 16, 7, 5 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 107371, 20220, 18109, 3117, 888, 366, 215, 110, 61, 
+                     71 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 123424, 4892, 4059, 3652, 2953, 2454, 2034, 1543, 
+                     1264, 4253 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             23.408535003662109375
+  Histogram:       [ 135699, 9042, 3783, 1342, 472, 125, 34, 20, 9, 2 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 123424, 4892, 4059, 3652, 2953, 2454, 2034, 1543, 
+                     1264, 4253 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 644393, 115853, 83373, 103837, 89021, 52356, 39720, 
+                     54655, 8066, 12950 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             20.7396030426025390625
+  Histogram:       [ 890484, 235195, 70624, 4829, 1654, 716, 324, 194, 
+                     187, 17 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 644393, 115853, 83373, 103837, 89021, 52356, 39720, 
+                     54655, 8066, 12950 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 1.20296e+06, 290718, 234100, 227691, 188735, 130838, 
+                     53520, 23861, 15278, 40751 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 2.40845e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             32.0583953857421875
+  Histogram:       [ 2.16308e+06, 216686, 16842, 6223, 2486, 1563, 1241, 
+                     268, 34, 29 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 2.40845e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 1.20296e+06, 290718, 234100, 227691, 188735, 130838, 
+                     53520, 23861, 15278, 40751 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 283139, 109797, 79665, 40354, 26827, 17019, 7915, 
+                     8143, 11937, 17316 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             31.8742923736572265625
+  Histogram:       [ 540713, 55121, 5800, 127, 15, 0, 32, 143, 60, 101 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 283139, 109797, 79665, 40354, 26827, 17019, 7915, 
+                     8143, 11937, 17316 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 486465, 262783, 214152, 128727, 61511, 28939, 12247, 
+                     4466, 2185, 2749 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             13.47630977630615234375
+  Histogram:       [ 789644, 328020, 72353, 11236, 2127, 548, 184, 73, 
+                     26, 13 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 486465, 262783, 214152, 128727, 61511, 28939, 12247, 
+                     4466, 2185, 2749 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 619160, 206215, 152972, 97745, 56655, 35113, 18820, 
+                     8778, 4208, 4558 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             20.446247100830078125
+  Histogram:       [ 1.00104e+06, 174635, 25609, 2500, 345, 74, 15, 4, 
+                     5, 1 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 619160, 206215, 152972, 97745, 56655, 35113, 18820, 
+                     8778, 4208, 4558 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 686165, 211864, 165395, 76900, 32971, 14199, 6930, 
+                     3949, 2068, 3783 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             18.9751110076904296875
+  Histogram:       [ 1.08044e+06, 109849, 10773, 2105, 678, 251, 109, 11, 
+                     6, 2 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 1.20422e+06, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 686165, 211864, 165395, 76900, 32971, 14199, 6930, 
+                     3949, 2068, 3783 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 126657, 53652, 40892, 30544, 17645, 12648, 9389, 5488, 
+                     2270, 1871 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             8.99246883392333984375
+  Histogram:       [ 155078, 64857, 40347, 21184, 13109, 4558, 1812, 87, 
+                     20, 4 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 126657, 53652, 40892, 30544, 17645, 12648, 9389, 5488, 
+                     2270, 1871 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 212970, 167395, 134990, 56540, 20516, 6428, 1984, 
+                     722, 298, 269 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             10.9290981292724609375
+  Histogram:       [ 345248, 210194, 40482, 5106, 810, 191, 48, 17, 13, 
+                     3 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 212970, 167395, 134990, 56540, 20516, 6428, 1984, 
+                     722, 298, 269 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 382151, 98470, 62542, 28119, 15448, 8392, 3969, 1793, 
+                     710, 518 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             9.793872833251953125
+  Histogram:       [ 446190, 105457, 32946, 12823, 3549, 852, 241, 42, 
+                     8, 4 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 382151, 98470, 62542, 28119, 15448, 8392, 3969, 1793, 
+                     710, 518 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 370950, 111548, 75087, 29649, 9323, 3479, 1278, 490, 
+                     201, 107 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             8.0349102020263671875
+  Histogram:       [ 407839, 125770, 51458, 12569, 3272, 876, 255, 59, 
+                     10, 4 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 602112, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 370950, 111548, 75087, 29649, 9323, 3479, 1278, 490, 
+                     201, 107 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 79150, 26174, 21137, 13103, 6772, 2938, 727, 266, 
+                     128, 133 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             8.522457122802734375
+  Histogram:       [ 90748, 31988, 18369, 7213, 1668, 349, 119, 44, 22, 
+                     8 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 150528, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 79150, 26174, 21137, 13103, 6772, 2938, 727, 266, 
+                     128, 133 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 128323, 83431, 56268, 22003, 7301, 2489, 735, 258, 
+                     98, 150 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             13.12630367279052734375
+  Histogram:       [ 216311, 74688, 9001, 878, 105, 39, 17, 12, 2, 3 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 128323, 83431, 56268, 22003, 7301, 2489, 735, 258, 
+                     98, 150 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 197510, 49013, 28498, 13729, 6462, 2994, 1415, 746, 
+                     344, 345 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             9.52085781097412109375
+  Histogram:       [ 226208, 51843, 16036, 4709, 1537, 482, 168, 60, 8, 
+                     5 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 197510, 49013, 28498, 13729, 6462, 2994, 1415, 746, 
+                     344, 345 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 170071, 65699, 40687, 15850, 5599, 1954, 739, 265, 
+                     103, 89 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             8.8314056396484375
+  Histogram:       [ 201645, 71825, 21609, 4658, 963, 253, 67, 28, 6, 2 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 170071, 65699, 40687, 15850, 5599, 1954, 739, 265, 
+                     103, 89 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 183305, 53396, 37434, 15620, 6371, 2871, 1156, 447, 
+                     186, 270 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             15.0186214447021484375
+  Histogram:       [ 252190, 42448, 5613, 626, 120, 34, 16, 6, 1, 2 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 183305, 53396, 37434, 15620, 6371, 2871, 1156, 447, 
+                     186, 270 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 190613, 53330, 33481, 14786, 5616, 2016, 775, 276, 
+                     99, 64 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             7.15014743804931640625
+  Histogram:       [ 201576, 57798, 27886, 9589, 2930, 906, 249, 93, 24, 
+                     5 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 190613, 53330, 33481, 14786, 5616, 2016, 775, 276, 
+                     99, 64 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 188254, 52890, 34099, 14423, 6724, 2582, 1037, 487, 
+                     233, 327 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             14.2398014068603515625
+  Histogram:       [ 254929, 39329, 5767, 762, 193, 40, 20, 9, 5, 2 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 188254, 52890, 34099, 14423, 6724, 2582, 1037, 487, 
+                     233, 327 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 194675, 50296, 31755, 14721, 5943, 2309, 831, 311, 
+                     127, 88 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1_maxSplat:0'
+  Min:             6.0
+  Max:             6.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1_minClip:0'
+  Min:             0.0
+  Max:             14.03767108917236328125
+  Histogram:       [ 255992, 39937, 4567, 489, 41, 15, 8, 1, 2, 4 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1_minSplat:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 301056, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__2:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 194675, 50296, 31755, 14721, 5943, 2309, 831, 311, 
+                     127, 88 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__1:0'
+  Min:             -10.20648860931396484375
+  Max:             19.1826419830322265625
+  Histogram:       [ 16, 181, 762, 1096, 702, 202, 36, 4, 3, 1 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__1_bias:0'
+  Min:             -10.20648860931396484375
+  Max:             19.1826419830322265625
+  Histogram:       [ 16, 181, 762, 1096, 702, 202, 36, 4, 3, 1 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__1_dot:0'
+  Min:             -9.58190059661865234375
+  Max:             19.331127166748046875
+  Histogram:       [ 16, 229, 896, 1073, 598, 160, 24, 4, 2, 1 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2:0'
+  Min:             -10.20648860931396484375
+  Max:             19.1826419830322265625
+  Histogram:       [ 16, 181, 762, 1096, 702, 202, 36, 4, 3, 1 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             5.01788234710693359375
+  Histogram:       [ 2024, 464, 248, 157, 79, 45, 31, 16, 4, 4 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeOutput:0'
+  Min:             -10.20648860931396484375
+  Max:             19.1826419830322265625
+  Histogram:       [ 16, 181, 762, 1096, 702, 202, 36, 4, 3, 1 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.367722570896148681640625
+  Max:             0.893506228923797607421875
+  Histogram:       [ 192, 91107, 1.79838e+06, 1.04603e+06, 122907, 14232, 
+                     1779, 369, 60, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_TransposeWeights:0'
+  Min:             -0.367722570896148681640625
+  Max:             0.893506228923797607421875
+  Histogram:       [ 192, 91107, 1.79838e+06, 1.04603e+06, 122907, 14232, 
+                     1779, 369, 60, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2:0'
+  Min:             -14.27480602264404296875
+  Max:             20.20085906982421875
+  Histogram:       [ 20, 1057, 10495, 320888, 661181, 201490, 8610, 389, 
+                     84, 10 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2:0'
+  Min:             -10.3884830474853515625
+  Max:             15.3134403228759765625
+  Histogram:       [ 27, 368, 5547, 118231, 162747, 13667, 375, 65, 26, 
+                     3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__1:0'
+  Min:             -8.2866115570068359375
+  Max:             12.0770854949951171875
+  Histogram:       [ 25, 570, 18219, 128770, 132585, 19660, 1124, 82, 15, 
+                     6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__1_bias:0'
+  Min:             -8.2866115570068359375
+  Max:             12.0770854949951171875
+  Histogram:       [ 25, 570, 18219, 128770, 132585, 19660, 1124, 82, 15, 
+                     6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__1_dot:0'
+  Min:             -9.9115428924560546875
+  Max:             9.99546337127685546875
+  Histogram:       [ 9, 185, 2826, 24574, 108994, 127704, 33190, 3315, 
+                     239, 20 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2:0'
+  Min:             -8.2866115570068359375
+  Max:             12.0770854949951171875
+  Histogram:       [ 25, 570, 18219, 128770, 132585, 19660, 1124, 82, 15, 
+                     6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 185724, 55918, 34341, 14835, 5807, 2350, 1042, 463, 
+                     231, 345 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -8.2866115570068359375
+  Max:             12.0770854949951171875
+  Histogram:       [ 25, 570, 18219, 128770, 132585, 19660, 1124, 82, 15, 
+                     6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.948734700679779052734375
+  Max:             1.497696399688720703125
+  Histogram:       [ 6, 51, 1761, 566502, 217437, 627, 39, 6, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.948734700679779052734375
+  Max:             1.497696399688720703125
+  Histogram:       [ 6, 51, 1761, 566502, 217437, 627, 39, 6, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2:0'
+  Min:             -11.5874538421630859375
+  Max:             15.19689655303955078125
+  Histogram:       [ 30, 317, 2284, 36800, 233223, 27400, 854, 109, 27, 
+                     12 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__1:0'
+  Min:             -8.174877166748046875
+  Max:             7.62828731536865234375
+  Histogram:       [ 13, 125, 2935, 42464, 122890, 101556, 28260, 2589, 
+                     215, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__1_bias:0'
+  Min:             -8.174877166748046875
+  Max:             7.62828731536865234375
+  Histogram:       [ 13, 125, 2935, 42464, 122890, 101556, 28260, 2589, 
+                     215, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__1_dot:0'
+  Min:             -8.099170684814453125
+  Max:             8.6268215179443359375
+  Histogram:       [ 15, 296, 4739, 40377, 122069, 100868, 28150, 3906, 
+                     584, 52 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2:0'
+  Min:             -8.174877166748046875
+  Max:             7.62828731536865234375
+  Histogram:       [ 13, 125, 2935, 42464, 122890, 101556, 28260, 2589, 
+                     215, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 183036, 50213, 39236, 17597, 6269, 2377, 1065, 491, 
+                     305, 467 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -8.174877166748046875
+  Max:             7.62828731536865234375
+  Histogram:       [ 13, 125, 2935, 42464, 122890, 101556, 28260, 2589, 
+                     215, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.82671868801116943359375
+  Max:             0.55324590206146240234375
+  Histogram:       [ 3, 9, 24, 219, 12402, 395232, 367734, 10530, 240, 
+                     39 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.82671868801116943359375
+  Max:             0.55324590206146240234375
+  Histogram:       [ 3, 9, 24, 219, 12402, 395232, 367734, 10530, 240, 
+                     39 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2:0'
+  Min:             -8.5602550506591796875
+  Max:             17.5522899627685546875
+  Histogram:       [ 2, 111, 3933, 62612, 8451, 114, 28, 9, 2, 2 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__1:0'
+  Min:             -9.20046138763427734375
+  Max:             7.27667999267578125
+  Histogram:       [ 64, 312, 932, 3808, 37825, 82148, 23380, 1932, 117, 
+                     10 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__1_bias:0'
+  Min:             -9.20046138763427734375
+  Max:             7.27667999267578125
+  Histogram:       [ 64, 312, 932, 3808, 37825, 82148, 23380, 1932, 117, 
+                     10 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__1_dot:0'
+  Min:             -10.73115253448486328125
+  Max:             7.8715648651123046875
+  Histogram:       [ 18, 131, 605, 3883, 23545, 68201, 45619, 7585, 872, 
+                     69 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2:0'
+  Min:             -9.20046138763427734375
+  Max:             7.27667999267578125
+  Histogram:       [ 64, 312, 932, 3808, 37825, 82148, 23380, 1932, 117, 
+                     10 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 45261, 11372, 8916, 7460, 1680, 277, 103, 65, 31, 
+                     99 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -9.20046138763427734375
+  Max:             7.27667999267578125
+  Histogram:       [ 64, 312, 932, 3808, 37825, 82148, 23380, 1932, 117, 
+                     10 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -1.04505836963653564453125
+  Max:             1.0351226329803466796875
+  Histogram:       [ 12, 6, 36, 3279, 743520, 821253, 4605, 123, 12, 18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -1.04505836963653564453125
+  Max:             1.0351226329803466796875
+  Histogram:       [ 12, 6, 36, 3279, 743520, 821253, 4605, 123, 12, 18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2:0'
+  Min:             -18.6644191741943359375
+  Max:             9.49285984039306640625
+  Histogram:       [ 3, 19, 72, 416, 2297, 15802, 87436, 43131, 1312, 40 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__1:0'
+  Min:             -28.0998687744140625
+  Max:             23.408535003662109375
+  Histogram:       [ 17, 213, 2552, 19794, 66166, 49317, 11158, 1206, 90, 
+                     15 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__1_bias:0'
+  Min:             -28.0998687744140625
+  Max:             23.408535003662109375
+  Histogram:       [ 17, 213, 2552, 19794, 66166, 49317, 11158, 1206, 90, 
+                     15 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__1_dot:0'
+  Min:             -31.8404750823974609375
+  Max:             26.2301349639892578125
+  Histogram:       [ 78, 860, 7288, 32317, 57591, 39142, 11375, 1732, 135, 
+                     10 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2:0'
+  Min:             -28.0998687744140625
+  Max:             23.408535003662109375
+  Histogram:       [ 17, 213, 2552, 19794, 66166, 49317, 11158, 1206, 90, 
+                     15 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 107371, 20220, 18109, 3117, 888, 366, 215, 110, 61, 
+                     71 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -28.0998687744140625
+  Max:             23.408535003662109375
+  Histogram:       [ 17, 213, 2552, 19794, 66166, 49317, 11158, 1206, 90, 
+                     15 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -1.70617568492889404296875
+  Max:             2.86484050750732421875
+  Histogram:       [ 111, 8610, 343302, 1.84067e+06, 905940, 46503, 564, 
+                     18, 3, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -1.70617568492889404296875
+  Max:             2.86484050750732421875
+  Histogram:       [ 111, 8610, 343302, 1.84067e+06, 905940, 46503, 564, 
+                     18, 3, 9 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2:0'
+  Min:             -20.8679332733154296875
+  Max:             20.7396030426025390625
+  Histogram:       [ 135, 161, 7136, 8304, 474620, 632804, 77924, 2412, 
+                     521, 207 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__1:0'
+  Min:             -24.8072967529296875
+  Max:             32.0583953857421875
+  Histogram:       [ 330, 1462, 17594, 339712, 1.75366e+06, 281951, 9838, 
+                     2936, 912, 55 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__1_bias:0'
+  Min:             -24.8072967529296875
+  Max:             32.0583953857421875
+  Histogram:       [ 330, 1462, 17594, 339712, 1.75366e+06, 281951, 9838, 
+                     2936, 912, 55 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__1_dot:0'
+  Min:             -33.374225616455078125
+  Max:             36.811893463134765625
+  Histogram:       [ 348, 7085, 72703, 199071, 1.32269e+06, 650007, 123458, 
+                     28824, 3960, 300 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2:0'
+  Min:             -24.8072967529296875
+  Max:             32.0583953857421875
+  Histogram:       [ 330, 1462, 17594, 339712, 1.75366e+06, 281951, 9838, 
+                     2936, 912, 55 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 644393, 115853, 83373, 103837, 89021, 52356, 39720, 
+                     54655, 8066, 12950 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -24.8072967529296875
+  Max:             32.0583953857421875
+  Histogram:       [ 330, 1462, 17594, 339712, 1.75366e+06, 281951, 9838, 
+                     2936, 912, 55 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -4.0786304473876953125
+  Max:             4.202649593353271484375
+  Histogram:       [ 6, 6, 12, 99, 5067, 861, 54, 18, 15, 6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -4.0786304473876953125
+  Max:             4.202649593353271484375
+  Histogram:       [ 6, 6, 12, 99, 5067, 861, 54, 18, 15, 6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2:0'
+  Min:             -24.8139095306396484375
+  Max:             31.8742923736572265625
+  Histogram:       [ 223, 91, 1262, 35758, 491085, 72666, 691, 31, 145, 
+                     160 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__1:0'
+  Min:             -14.9504222869873046875
+  Max:             13.47630977630615234375
+  Histogram:       [ 8, 120, 1426, 18204, 218105, 683661, 273599, 8655, 
+                     402, 44 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__1_bias:0'
+  Min:             -14.9504222869873046875
+  Max:             13.47630977630615234375
+  Histogram:       [ 8, 120, 1426, 18204, 218105, 683661, 273599, 8655, 
+                     402, 44 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__1_dot:0'
+  Min:             -16.7799701690673828125
+  Max:             16.369655609130859375
+  Histogram:       [ 27, 388, 4931, 58150, 404884, 558439, 140846, 32453, 
+                     4045, 61 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2:0'
+  Min:             -14.9504222869873046875
+  Max:             13.47630977630615234375
+  Histogram:       [ 8, 120, 1426, 18204, 218105, 683661, 273599, 8655, 
+                     402, 44 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 283139, 109797, 79665, 40354, 26827, 17019, 7915, 
+                     8143, 11937, 17316 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -14.9504222869873046875
+  Max:             13.47630977630615234375
+  Histogram:       [ 8, 120, 1426, 18204, 218105, 683661, 273599, 8655, 
+                     402, 44 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -1.76178705692291259765625
+  Max:             2.5385324954986572265625
+  Histogram:       [ 12, 27, 249, 5328, 18489, 378, 75, 15, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -1.76178705692291259765625
+  Max:             2.5385324954986572265625
+  Histogram:       [ 12, 27, 249, 5328, 18489, 378, 75, 15, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2:0'
+  Min:             -17.4867401123046875
+  Max:             20.446247100830078125
+  Histogram:       [ 108, 158, 2458, 108013, 676350, 397168, 19595, 348, 
+                     21, 5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__1:0'
+  Min:             -12.53486728668212890625
+  Max:             18.9751110076904296875
+  Histogram:       [ 50, 1876, 34644, 469340, 673928, 22330, 1684, 337, 
+                     30, 5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__1_bias:0'
+  Min:             -12.53486728668212890625
+  Max:             18.9751110076904296875
+  Histogram:       [ 50, 1876, 34644, 469340, 673928, 22330, 1684, 337, 
+                     30, 5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__1_dot:0'
+  Min:             -14.88187313079833984375
+  Max:             18.5782928466796875
+  Histogram:       [ 90, 2630, 35193, 246396, 689414, 199379, 28442, 2422, 
+                     244, 14 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2:0'
+  Min:             -12.53486728668212890625
+  Max:             18.9751110076904296875
+  Histogram:       [ 50, 1876, 34644, 469340, 673928, 22330, 1684, 337, 
+                     30, 5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 619160, 206215, 152972, 97745, 56655, 35113, 18820, 
+                     8778, 4208, 4558 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -12.53486728668212890625
+  Max:             18.9751110076904296875
+  Histogram:       [ 50, 1876, 34644, 469340, 673928, 22330, 1684, 337, 
+                     30, 5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -1.2611062526702880859375
+  Max:             2.224309444427490234375
+  Histogram:       [ 9, 84, 1416, 44364, 3075, 162, 33, 6, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -1.2611062526702880859375
+  Max:             2.224309444427490234375
+  Histogram:       [ 9, 84, 1416, 44364, 3075, 162, 33, 6, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2:0'
+  Min:             -15.31953907012939453125
+  Max:             8.99246883392333984375
+  Histogram:       [ 11, 76, 456, 1894, 6490, 44567, 148184, 84638, 14012, 
+                     728 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__1:0'
+  Min:             -6.16177845001220703125
+  Max:             10.9290981292724609375
+  Histogram:       [ 193, 3862, 39274, 210895, 286443, 58046, 3166, 193, 
+                     29, 11 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__1_bias:0'
+  Min:             -6.16177845001220703125
+  Max:             10.9290981292724609375
+  Histogram:       [ 193, 3862, 39274, 210895, 286443, 58046, 3166, 193, 
+                     29, 11 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__1_dot:0'
+  Min:             -9.315204620361328125
+  Max:             11.4446659088134765625
+  Histogram:       [ 538, 3414, 20511, 115588, 283667, 147621, 27658, 2880, 
+                     213, 22 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2:0'
+  Min:             -6.16177845001220703125
+  Max:             10.9290981292724609375
+  Histogram:       [ 193, 3862, 39274, 210895, 286443, 58046, 3166, 193, 
+                     29, 11 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 126657, 53652, 40892, 30544, 17645, 12648, 9389, 5488, 
+                     2270, 1871 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -6.16177845001220703125
+  Max:             10.9290981292724609375
+  Histogram:       [ 193, 3862, 39274, 210895, 286443, 58046, 3166, 193, 
+                     29, 11 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -1.15154743194580078125
+  Max:             0.771094620227813720703125
+  Histogram:       [ 3, 3, 36, 177, 1539, 50106, 44436, 1662, 270, 72 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -1.15154743194580078125
+  Max:             0.771094620227813720703125
+  Histogram:       [ 3, 3, 36, 177, 1539, 50106, 44436, 1662, 270, 72 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2:0'
+  Min:             -12.241245269775390625
+  Max:             9.793872833251953125
+  Histogram:       [ 77, 229, 1057, 6495, 65996, 372525, 143199, 11970, 
+                     547, 17 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__1:0'
+  Min:             -8.5166034698486328125
+  Max:             8.0349102020263671875
+  Histogram:       [ 17, 387, 5233, 47957, 181154, 251937, 106314, 8492, 
+                     584, 37 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__1_bias:0'
+  Min:             -8.5166034698486328125
+  Max:             8.0349102020263671875
+  Histogram:       [ 17, 387, 5233, 47957, 181154, 251937, 106314, 8492, 
+                     584, 37 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__1_dot:0'
+  Min:             -9.3377323150634765625
+  Max:             9.21667385101318359375
+  Histogram:       [ 45, 529, 6304, 48650, 210087, 252377, 73277, 10043, 
+                     768, 32 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2:0'
+  Min:             -8.5166034698486328125
+  Max:             8.0349102020263671875
+  Histogram:       [ 17, 387, 5233, 47957, 181154, 251937, 106314, 8492, 
+                     584, 37 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 382151, 98470, 62542, 28119, 15448, 8392, 3969, 1793, 
+                     710, 518 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -8.5166034698486328125
+  Max:             8.0349102020263671875
+  Histogram:       [ 17, 387, 5233, 47957, 181154, 251937, 106314, 8492, 
+                     584, 37 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.76418781280517578125
+  Max:             0.86304962635040283203125
+  Histogram:       [ 18, 102, 705, 8340, 154263, 31296, 1617, 213, 39, 
+                     15 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.76418781280517578125
+  Max:             0.86304962635040283203125
+  Histogram:       [ 18, 102, 705, 8340, 154263, 31296, 1617, 213, 39, 
+                     15 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2:0'
+  Min:             -12.24755573272705078125
+  Max:             8.522457122802734375
+  Histogram:       [ 25, 73, 295, 1179, 5972, 41860, 85367, 15191, 524, 
+                     42 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__1:0'
+  Min:             -9.504512786865234375
+  Max:             13.12630367279052734375
+  Histogram:       [ 7, 97, 3224, 54671, 180472, 60278, 2210, 74, 19, 4 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__1_bias:0'
+  Min:             -9.504512786865234375
+  Max:             13.12630367279052734375
+  Histogram:       [ 7, 97, 3224, 54671, 180472, 60278, 2210, 74, 19, 4 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__1_dot:0'
+  Min:             -10.1207027435302734375
+  Max:             15.7715473175048828125
+  Histogram:       [ 173, 1955, 21875, 156849, 107888, 11803, 464, 33, 
+                     12, 4 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2:0'
+  Min:             -9.504512786865234375
+  Max:             13.12630367279052734375
+  Histogram:       [ 7, 97, 3224, 54671, 180472, 60278, 2210, 74, 19, 4 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 79150, 26174, 21137, 13103, 6772, 2938, 727, 266, 
+                     128, 133 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -9.504512786865234375
+  Max:             13.12630367279052734375
+  Histogram:       [ 7, 97, 3224, 54671, 180472, 60278, 2210, 74, 19, 4 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.99700248241424560546875
+  Max:             1.3317172527313232421875
+  Histogram:       [ 18, 48, 546, 31788, 356235, 4266, 249, 48, 15, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.99700248241424560546875
+  Max:             1.3317172527313232421875
+  Histogram:       [ 18, 48, 546, 31788, 356235, 4266, 249, 48, 15, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2:0'
+  Min:             -11.534694671630859375
+  Max:             9.52085781097412109375
+  Histogram:       [ 65, 261, 1159, 5905, 45910, 185413, 57793, 4173, 359, 
+                     18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__1:0'
+  Min:             -6.5960540771484375
+  Max:             8.8314056396484375
+  Histogram:       [ 91, 894, 10423, 64951, 148488, 69198, 6498, 457, 51, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__1_bias:0'
+  Min:             -6.5960540771484375
+  Max:             8.8314056396484375
+  Histogram:       [ 91, 894, 10423, 64951, 148488, 69198, 6498, 457, 51, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__1_dot:0'
+  Min:             -9.1911067962646484375
+  Max:             8.32829189300537109375
+  Histogram:       [ 6, 210, 2157, 20563, 97747, 138412, 36899, 4664, 366, 
+                     32 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2:0'
+  Min:             -6.5960540771484375
+  Max:             8.8314056396484375
+  Histogram:       [ 91, 894, 10423, 64951, 148488, 69198, 6498, 457, 51, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 197510, 49013, 28498, 13729, 6462, 2994, 1415, 746, 
+                     344, 345 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -6.5960540771484375
+  Max:             8.8314056396484375
+  Histogram:       [ 91, 894, 10423, 64951, 148488, 69198, 6498, 457, 51, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.75420749187469482421875
+  Max:             0.61294496059417724609375
+  Histogram:       [ 6, 33, 96, 1119, 40584, 701406, 41739, 1269, 162, 
+                     18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.75420749187469482421875
+  Max:             0.61294496059417724609375
+  Histogram:       [ 6, 33, 96, 1119, 40584, 701406, 41739, 1269, 162, 
+                     18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2:0'
+  Min:             -12.13751697540283203125
+  Max:             15.0186214447021484375
+  Histogram:       [ 2, 166, 1875, 39720, 211558, 46358, 1265, 93, 17, 
+                     2 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__1:0'
+  Min:             -6.722531795501708984375
+  Max:             7.15014743804931640625
+  Histogram:       [ 9, 338, 6020, 42193, 105929, 111309, 31438, 3494, 
+                     298, 28 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__1_bias:0'
+  Min:             -6.722531795501708984375
+  Max:             7.15014743804931640625
+  Histogram:       [ 9, 338, 6020, 42193, 105929, 111309, 31438, 3494, 
+                     298, 28 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__1_dot:0'
+  Min:             -6.710714817047119140625
+  Max:             9.3920803070068359375
+  Histogram:       [ 169, 3162, 26469, 90064, 113402, 53627, 12488, 1544, 
+                     126, 5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2:0'
+  Min:             -6.722531795501708984375
+  Max:             7.15014743804931640625
+  Histogram:       [ 9, 338, 6020, 42193, 105929, 111309, 31438, 3494, 
+                     298, 28 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 183305, 53396, 37434, 15620, 6371, 2871, 1156, 447, 
+                     186, 270 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -6.722531795501708984375
+  Max:             7.15014743804931640625
+  Histogram:       [ 9, 338, 6020, 42193, 105929, 111309, 31438, 3494, 
+                     298, 28 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.63166630268096923828125
+  Max:             0.64059531688690185546875
+  Histogram:       [ 54, 90, 600, 12648, 423627, 338427, 10134, 732, 102, 
+                     18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.63166630268096923828125
+  Max:             0.64059531688690185546875
+  Histogram:       [ 54, 90, 600, 12648, 423627, 338427, 10134, 732, 102, 
+                     18 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2:0'
+  Min:             -11.07690143585205078125
+  Max:             14.2398014068603515625
+  Histogram:       [ 20, 148, 2788, 50311, 201459, 44608, 1600, 97, 19, 
+                     6 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__1:0'
+  Min:             -6.208742618560791015625
+  Max:             14.03767108917236328125
+  Histogram:       [ 362, 15046, 114926, 148832, 20877, 952, 43, 11, 2, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__1_bias:0'
+  Min:             -6.208742618560791015625
+  Max:             14.03767108917236328125
+  Histogram:       [ 362, 15046, 114926, 148832, 20877, 952, 43, 11, 2, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__1_dot:0'
+  Min:             -7.3177051544189453125
+  Max:             13.59548091888427734375
+  Histogram:       [ 241, 6247, 68377, 155926, 62935, 6895, 414, 14, 2, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2:0'
+  Min:             -6.208742618560791015625
+  Max:             14.03767108917236328125
+  Histogram:       [ 362, 15046, 114926, 148832, 20877, 952, 43, 11, 2, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2_ReshapeInput:0'
+  Min:             0.0
+  Max:             6.0
+  Histogram:       [ 188254, 52890, 34099, 14423, 6724, 2582, 1037, 487, 
+                     233, 327 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2_ReshapeOutput:0'
+  Min:             -6.208742618560791015625
+  Max:             14.03767108917236328125
+  Histogram:       [ 362, 15046, 114926, 148832, 20877, 952, 43, 11, 2, 
+                     5 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2_ReshapeWeights:0'
+  Min:             -0.69154846668243408203125
+  Max:             1.30257856845855712890625
+  Histogram:       [ 30, 381, 38358, 721851, 25332, 459, 15, 3, 0, 3 ]
+- NodeOutputName:  'Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2_TransposeWeights:0'
+  Min:             -0.69154846668243408203125
+  Max:             1.30257856845855712890625
+  Histogram:       [ 30, 381, 38358, 721851, 25332, 459, 15, 3, 0, 3 ]
+- NodeOutputName:  'MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D_bias:0'
+  Min:             -0.92352855205535888671875
+  Max:             0.848411858081817626953125
+  Histogram:       [ 12, 63, 156, 435, 657, 747, 543, 276, 96, 18 ]
+- NodeOutputName:  'MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D_weight__1:0'
+  Min:             -0.367722570896148681640625
+  Max:             0.893506228923797607421875
+  Histogram:       [ 192, 91107, 1.79838e+06, 1.04603e+06, 122907, 14232, 
+                     1779, 369, 60, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_0_Conv2D_weight__1:0'
+  Min:             -2.8305900096893310546875
+  Max:             2.047890186309814453125
+  Histogram:       [ 3, 9, 18, 42, 117, 1842, 417, 99, 30, 15 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise_weight__1:0'
+  Min:             -3.3812124729156494140625
+  Max:             2.9696533679962158203125
+  Histogram:       [ 6, 9, 12, 126, 3285, 8712, 1350, 279, 33, 12 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D_weight__1:0'
+  Min:             -0.948734700679779052734375
+  Max:             1.497696399688720703125
+  Histogram:       [ 6, 51, 1761, 566502, 217437, 627, 39, 6, 0, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise_weight__1:0'
+  Min:             -2.05323886871337890625
+  Max:             2.9264829158782958984375
+  Histogram:       [ 21, 36, 324, 6123, 5559, 1410, 285, 48, 12, 6 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D_weight__1:0'
+  Min:             -0.82671868801116943359375
+  Max:             0.55324590206146240234375
+  Histogram:       [ 3, 9, 24, 219, 12402, 395232, 367734, 10530, 240, 
+                     39 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise_weight__1:0'
+  Min:             -0.977460920810699462890625
+  Max:             0.992525577545166015625
+  Histogram:       [ 9, 72, 273, 1821, 4053, 2247, 4074, 1107, 135, 33 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D_weight__1:0'
+  Min:             -1.04505836963653564453125
+  Max:             1.0351226329803466796875
+  Histogram:       [ 12, 6, 36, 3279, 743520, 821253, 4605, 123, 12, 18 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise_weight__1:0'
+  Min:             -25.778049468994140625
+  Max:             5.7665252685546875
+  Histogram:       [ 3, 9, 24, 27, 39, 45, 36, 3417, 23754, 294 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D_weight__1:0'
+  Min:             -1.70617568492889404296875
+  Max:             2.86484050750732421875
+  Histogram:       [ 111, 8610, 343302, 1.84067e+06, 905940, 46503, 564, 
+                     18, 3, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise_weight__1:0'
+  Min:             -31.9270839691162109375
+  Max:             42.28240203857421875
+  Histogram:       [ 3, 18, 30, 75, 669, 15, 15, 12, 18, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D_weight__1:0'
+  Min:             -4.0786304473876953125
+  Max:             4.202649593353271484375
+  Histogram:       [ 6, 6, 12, 99, 5067, 861, 54, 18, 15, 6 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise_weight__1:0'
+  Min:             -52.26987457275390625
+  Max:             50.32987213134765625
+  Histogram:       [ 3, 9, 15, 12, 96, 1551, 27, 9, 3, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D_weight__1:0'
+  Min:             -1.76178705692291259765625
+  Max:             2.5385324954986572265625
+  Histogram:       [ 12, 27, 249, 5328, 18489, 378, 75, 15, 0, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise_weight__1:0'
+  Min:             -10.86944103240966796875
+  Max:             7.327787876129150390625
+  Histogram:       [ 3, 0, 0, 0, 36, 2169, 1194, 48, 3, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D_weight__1:0'
+  Min:             -1.2611062526702880859375
+  Max:             2.224309444427490234375
+  Histogram:       [ 9, 84, 1416, 44364, 3075, 162, 33, 6, 0, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise_weight__1:0'
+  Min:             -2.0226328372955322265625
+  Max:             2.2243587970733642578125
+  Histogram:       [ 15, 21, 108, 504, 1104, 1452, 207, 24, 12, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D_weight__1:0'
+  Min:             -1.15154743194580078125
+  Max:             0.771094620227813720703125
+  Histogram:       [ 3, 3, 36, 177, 1539, 50106, 44436, 1662, 270, 72 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise_weight__1:0'
+  Min:             -5.25722980499267578125
+  Max:             5.20189380645751953125
+  Histogram:       [ 6, 12, 66, 276, 3612, 2448, 345, 105, 33, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D_weight__1:0'
+  Min:             -0.76418781280517578125
+  Max:             0.86304962635040283203125
+  Histogram:       [ 18, 102, 705, 8340, 154263, 31296, 1617, 213, 39, 
+                     15 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise_weight__1:0'
+  Min:             -1.64107358455657958984375
+  Max:             1.81167066097259521484375
+  Histogram:       [ 21, 63, 234, 1614, 1605, 2502, 729, 99, 36, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D_weight__1:0'
+  Min:             -0.99700248241424560546875
+  Max:             1.3317172527313232421875
+  Histogram:       [ 18, 48, 546, 31788, 356235, 4266, 249, 48, 15, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise_weight__1:0'
+  Min:             -4.796671390533447265625
+  Max:             4.595359325408935546875
+  Histogram:       [ 12, 24, 120, 585, 6018, 5766, 777, 420, 87, 15 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D_weight__1:0'
+  Min:             -0.75420749187469482421875
+  Max:             0.61294496059417724609375
+  Histogram:       [ 6, 33, 96, 1119, 40584, 701406, 41739, 1269, 162, 
+                     18 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise_weight__1:0'
+  Min:             -4.02991580963134765625
+  Max:             6.920988559722900390625
+  Histogram:       [ 18, 21, 342, 11331, 1914, 168, 27, 0, 0, 3 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D_weight__1:0'
+  Min:             -0.63166630268096923828125
+  Max:             0.64059531688690185546875
+  Histogram:       [ 54, 90, 600, 12648, 423627, 338427, 10134, 732, 102, 
+                     18 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise_weight__1:0'
+  Min:             -3.626200199127197265625
+  Max:             3.6073582172393798828125
+  Histogram:       [ 3, 3, 12, 213, 6066, 6504, 927, 75, 12, 9 ]
+- NodeOutputName:  'MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D_weight__1:0'
+  Min:             -0.69154846668243408203125
+  Max:             1.30257856845855712890625
+  Histogram:       [ 30, 381, 38358, 721851, 25332, 459, 15, 3, 0, 3 ]
+- NodeOutputName:  'Reshape_MobilenetV1_Predictions_Reshape__1:0'
+  Min:             -10.20648860931396484375
+  Max:             19.1826419830322265625
+  Histogram:       [ 16, 181, 762, 1096, 702, 202, 36, 4, 3, 1 ]
+- NodeOutputName:  'Softmax_output:0'
+  Min:             0.00000000000017232387934142112673185920357354916632175445556640625
+  Max:             0.999728977680206298828125
+  Histogram:       [ 2999, 1, 0, 0, 0, 0, 0, 1, 1, 1 ]
+- NodeOutputName:  'conv_bias:0'
+  Min:             -2.5806319713592529296875
+  Max:             6.729741573333740234375
+  Histogram:       [ 3, 24, 15, 21, 9, 9, 0, 9, 0, 6 ]
+- NodeOutputName:  'conv_bias__12:0'
+  Min:             -2.2149102687835693359375
+  Max:             3.5206682682037353515625
+  Histogram:       [ 9, 12, 45, 717, 63, 129, 192, 237, 102, 30 ]
+- NodeOutputName:  'conv_bias__24:0'
+  Min:             -11.2042598724365234375
+  Max:             12.2189426422119140625
+  Histogram:       [ 12, 36, 102, 321, 657, 735, 663, 375, 135, 36 ]
+- NodeOutputName:  'conv_bias__27:0'
+  Min:             -2.2225043773651123046875
+  Max:             4.927846431732177734375
+  Histogram:       [ 6, 12, 18, 6, 3, 9, 24, 15, 0, 3 ]
+- NodeOutputName:  'conv_bias__28:0'
+  Min:             -12.475093841552734375
+  Max:             18.036037445068359375
+  Histogram:       [ 6, 6, 24, 39, 66, 36, 6, 0, 3, 6 ]
+- NodeOutputName:  'conv_bias__29:0'
+  Min:             -9.0385684967041015625
+  Max:             5.913892269134521484375
+  Histogram:       [ 6, 6, 6, 21, 30, 75, 108, 84, 33, 15 ]
+- NodeOutputName:  'conv_bias__2:0'
+  Min:             -0.96342432498931884765625
+  Max:             5.90260791778564453125
+  Histogram:       [ 27, 57, 33, 33, 18, 3, 6, 3, 3, 9 ]
+- NodeOutputName:  'conv_bias__30:0'
+  Min:             -6.624496936798095703125
+  Max:             14.30900478363037109375
+  Histogram:       [ 6, 0, 60, 258, 51, 3, 3, 0, 0, 3 ]
+- NodeOutputName:  'conv_bias__31:0'
+  Min:             -8.08203220367431640625
+  Max:             5.183651447296142578125
+  Histogram:       [ 3, 6, 9, 18, 42, 48, 129, 93, 18, 18 ]
+- NodeOutputName:  'conv_bias__32:0'
+  Min:             -4.10235118865966796875
+  Max:             6.447079181671142578125
+  Histogram:       [ 12, 30, 57, 153, 216, 210, 66, 18, 3, 3 ]
+- NodeOutputName:  'conv_bias__33:0'
+  Min:             -2.8048534393310546875
+  Max:             6.178002834320068359375
+  Histogram:       [ 15, 36, 192, 237, 144, 63, 33, 24, 15, 9 ]
+- NodeOutputName:  'conv_bias__34:0'
+  Min:             -3.6999557018280029296875
+  Max:             3.347056865692138671875
+  Histogram:       [ 18, 18, 39, 114, 144, 180, 156, 72, 24, 3 ]
+- NodeOutputName:  'conv_bias__35:0'
+  Min:             -3.136023998260498046875
+  Max:             5.430229663848876953125
+  Histogram:       [ 24, 39, 96, 201, 483, 489, 159, 30, 12, 3 ]
+- NodeOutputName:  'conv_bias__36:0'
+  Min:             -3.6328051090240478515625
+  Max:             8.3847904205322265625
+  Histogram:       [ 24, 78, 489, 666, 192, 48, 30, 6, 0, 3 ]
+- NodeOutputName:  'conv_bias__37:0'
+  Min:             -3.1125376224517822265625
+  Max:             3.5007903575897216796875
+  Histogram:       [ 3, 21, 60, 126, 339, 468, 351, 132, 27, 9 ]
+- NodeOutputName:  'conv_bias__38:0'
+  Min:             -7.32276248931884765625
+  Max:             4.60138607025146484375
+  Histogram:       [ 6, 3, 0, 27, 102, 534, 345, 399, 102, 18 ]
+- NodeOutputName:  'conv_bias__39:0'
+  Min:             -3.02805233001708984375
+  Max:             2.9332239627838134765625
+  Histogram:       [ 39, 69, 129, 168, 321, 351, 240, 174, 30, 15 ]
+- NodeOutputName:  'conv_bias__40:0'
+  Min:             -4.7321529388427734375
+  Max:             4.022072315216064453125
+  Histogram:       [ 9, 9, 33, 117, 465, 249, 333, 255, 57, 9 ]
+- NodeOutputName:  'conv_bias__41:0'
+  Min:             -3.21051883697509765625
+  Max:             2.894130229949951171875
+  Histogram:       [ 15, 18, 54, 231, 324, 318, 336, 162, 57, 21 ]
+- NodeOutputName:  'conv_bias__42:0'
+  Min:             -4.684144496917724609375
+  Max:             4.238466739654541015625
+  Histogram:       [ 3, 3, 18, 138, 465, 177, 447, 243, 39, 3 ]
+- NodeOutputName:  'conv_bias__43:0'
+  Min:             -4.238872528076171875
+  Max:             3.38439083099365234375
+  Histogram:       [ 3, 6, 105, 231, 381, 351, 273, 120, 48, 18 ]
+- NodeOutputName:  'conv_bias__44:0'
+  Min:             -2.5114991664886474609375
+  Max:             5.238483905792236328125
+  Histogram:       [ 30, 120, 405, 231, 297, 348, 90, 9, 0, 6 ]
+- NodeOutputName:  'conv_bias__45:0'
+  Min:             -3.969292163848876953125
+  Max:             2.7534046173095703125
+  Histogram:       [ 18, 60, 144, 201, 327, 285, 240, 177, 48, 36 ]
+- NodeOutputName:  'conv_bias__46:0'
+  Min:             -4.648297786712646484375
+  Max:             5.745841503143310546875
+  Histogram:       [ 15, 81, 375, 924, 888, 519, 222, 42, 3, 3 ]
+- NodeOutputName:  'conv_bias__47:0'
+  Min:             -2.4132668972015380859375
+  Max:             4.665660858154296875
+  Histogram:       [ 6, 36, 123, 1608, 6, 1107, 168, 12, 3, 3 ]
+- NodeOutputName:  'conv_bias__4:0'
+  Min:             -3.4946346282958984375
+  Max:             10.34099483489990234375
+  Histogram:       [ 3, 27, 186, 42, 72, 30, 18, 3, 0, 3 ]
+- NodeOutputName:  'conv_bias__8:0'
+  Min:             -1.37840640544891357421875
+  Max:             7.9218273162841796875
+  Histogram:       [ 33, 360, 33, 135, 120, 33, 27, 9, 6, 12 ]
+- NodeOutputName:  'input:0'
+  Min:             -1.0
+  Max:             1.0
+  Histogram:       [ 17545, 22932, 41254, 52129, 61909, 73202, 57210, 23290, 
+                     15368, 86745 ]
+...

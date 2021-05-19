@@ -1,0 +1,1002 @@
+digraph DAG {
+	rankdir=TB;
+output_save[
+	label = "{{<Input>Input|<Output>Output}|{Save\lname : output_save\lInput : float\<1 x 1001\>\lOutput : float\<1 x 1001\>\lusers : 0\l}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=PowderBlue
+penwidth = 2];
+
+Softmax_output[
+	label = "{{<Input>Input|<Selected>Selected}|{SoftMax\lname : Softmax_output\lInput : float\<1 x 1001\>\lSelected : index32\<1 x 1\>\lusers : 1\lResult : float\<1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=MistyRose1
+penwidth = 2];
+
+Reshape_MobilenetV1_Predictions_Reshape__1_dequantize[
+	label = "{{<Input>Input}|{Dequantize\lname : Reshape_MobilenetV1_Predictions_Reshape__1_dequantize\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 1001\>\lusers : 1\lResult : float\<1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=AliceBlue
+penwidth = 2];
+
+Reshape_MobilenetV1_Predictions_Reshape__1[
+	label = "{{<Input>Input}|{Reshape\lname : Reshape_MobilenetV1_Predictions_Reshape__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 1 x 1 x 1001\>\lDims : [1, 1001]\lLayout : *\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Yellow2
+penwidth = 2];
+
+Reshape_MobilenetV1_Predictions_Reshape__1_quantize[
+	label = "{{<Input>Input}|{Quantize\lname : Reshape_MobilenetV1_Predictions_Reshape__1_quantize\lInput : float\<1 x 1 x 1 x 1001\>\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 1 x 1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=PeachPuff1
+penwidth = 2];
+
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeOutput[
+	label = "{{<Input>Input}|{Reshape\lname : Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeOutput\lInput : float\<1 x 1001\>\lDims : [1, 1, 1, 1001]\lLayout : *\lusers : 1\lResult : float\<1 x 1 x 1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Yellow2
+penwidth = 2];
+
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_bias[
+	label = "{{<Batch>Batch|<Slice>Slice}|{BatchedAdd\lname : Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_bias\lBatch : float\<1 x 1001\>\lSlice : float\<1001\>\lusers : 1\lResult : float\<1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_dot[
+	label = "{{<LHS>LHS|<RHS>RHS}|{MatMul\lname : Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_dot\lLHS : float\<1 x 1024\>\lRHS : float\<1024 x 1001\>\lusers : 1\lResult : float\<1 x 1001\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=LavenderBlush1
+penwidth = 2];
+
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput_dequantize[
+	label = "{{<Input>Input}|{Dequantize\lname : Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput_dequantize\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 1024\>\lusers : 1\lResult : float\<1 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=AliceBlue
+penwidth = 2];
+
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput[
+	label = "{{<Input>Input}|{Reshape\lname : Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 1 x 1 x 1024\>\lDims : [1, 1024]\lLayout : *\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Yellow2
+penwidth = 2];
+
+AveragePool_MobilenetV1_Logits_AvgPool_1a_AvgPool__1[
+	label = "{{<Input>Input}|{AvgPool\lname : AveragePool_MobilenetV1_Logits_AvgPool_1a_AvgPool__1\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 1024\>\lKernels : [7, 7]\lStrides : [2, 2]\lPads : [0, 0, 0, 0]\lLayout : 0\lCountIncludePads : 0\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 1 x 1 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Yellow2
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 7 x 7 x 1024\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 1024\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<1024 x 1 x 1 x 1024\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<1024\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 7 x 7 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 7 x 7 x 1024\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 1024\>\lFilter : i8[S:0.2500 O:0][-32.000,31.750]\<1024 x 3 x 3 x 1\>\lBias : i32[S:0.0156 O:0][-33554432.000,33554432.000]\<1024\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 1024\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 7 x 7 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 7 x 7 x 1024\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 512\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<1024 x 1 x 1 x 512\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<1024\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 7 x 7 x 1024\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 7 x 7 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 7 x 7 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 3 x 3 x 1\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lKernels : [3, 3]\lStrides : [2, 2]\lPads : [0, 0, 1, 1]\lGroup : 512\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 7 x 7 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0078 O:0][-1.000,0.992]\<512 x 1 x 1 x 512\>\lBias : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<512\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<512 x 3 x 3 x 1\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<512\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 512\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 1 x 1 x 512\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<512 x 3 x 3 x 1\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<512\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 512\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 1 x 1 x 512\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<512 x 3 x 3 x 1\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<512\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 512\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0078 O:0][-1.000,0.992]\<512 x 1 x 1 x 512\>\lBias : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<512\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0625 O:0][-8.000,7.938]\<512 x 3 x 3 x 1\>\lBias : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<512\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 512\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0078 O:0][-1.000,0.992]\<512 x 1 x 1 x 512\>\lBias : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<512\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\lFilter : i8[S:0.0625 O:0][-8.000,7.938]\<512 x 3 x 3 x 1\>\lBias : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<512\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 512\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 256\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 1 x 1 x 256\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 512\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 256\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 14 x 14 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 256\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<256 x 3 x 3 x 1\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<256\>\lKernels : [3, 3]\lStrides : [2, 2]\lPads : [0, 0, 1, 1]\lGroup : 256\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 14 x 14 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 256\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 256\>\lFilter : i8[S:0.0078 O:0][-1.000,0.992]\<256 x 1 x 1 x 256\>\lBias : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<256\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 256\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 256\>\lFilter : i8[S:0.0625 O:0][-8.000,7.938]\<256 x 3 x 3 x 1\>\lBias : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<256\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 256\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 256\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 128\>\lFilter : i8[S:0.0156 O:0][-2.000,1.984]\<256 x 1 x 1 x 128\>\lBias : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<256\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 256\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 128\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 28 x 28 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 128\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<128 x 3 x 3 x 1\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<128\>\lKernels : [3, 3]\lStrides : [2, 2]\lPads : [0, 0, 1, 1]\lGroup : 128\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 28 x 28 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 56 x 56 x 128\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 128\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<128 x 1 x 1 x 128\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<128\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 56 x 56 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 56 x 56 x 128\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 128\>\lFilter : i8[S:0.1250 O:0][-16.000,15.875]\<128 x 3 x 3 x 1\>\lBias : i32[S:0.0078 O:0][-16777216.000,16777216.000]\<128\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 128\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 56 x 56 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1\lInput : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 56 x 56 x 128\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 64\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<128 x 1 x 1 x 64\>\lBias : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<128\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.1250 O:0][-16.000,15.875]\<1 x 56 x 56 x 128\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1\lInput : i8[S:0.5000 O:0][-64.000,63.500]\<1 x 56 x 56 x 64\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 56 x 56 x 64\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 112 x 112 x 64\>\lFilter : i8[S:0.5000 O:0][-64.000,63.500]\<64 x 3 x 3 x 1\>\lBias : i32[S:0.0312 O:0][-67108864.000,67108864.000]\<64\>\lKernels : [3, 3]\lStrides : [2, 2]\lPads : [0, 0, 1, 1]\lGroup : 64\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.5000 O:0][-64.000,63.500]\<1 x 56 x 56 x 64\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1\lInput : i8[S:0.5000 O:0][-64.000,63.500]\<1 x 112 x 112 x 64\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 112 x 112 x 64\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 112 x 112 x 32\>\lFilter : i8[S:0.0625 O:0][-8.000,7.938]\<64 x 1 x 1 x 32\>\lBias : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<64\>\lKernels : [1, 1]\lStrides : [1, 1]\lPads : [0, 0, 0, 0]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.5000 O:0][-64.000,63.500]\<1 x 112 x 112 x 64\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 112 x 112 x 32\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 112 x 112 x 32\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2\lInput : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 112 x 112 x 32\>\lFilter : i8[S:0.5000 O:0][-64.000,63.500]\<32 x 3 x 3 x 1\>\lBias : i32[S:0.0312 O:0][-67108864.000,67108864.000]\<32\>\lKernels : [3, 3]\lStrides : [1, 1]\lPads : [1, 1, 1, 1]\lGroup : 32\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 112 x 112 x 32\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1[
+	label = "{{<Input>Input}|{Clip\lname : Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1\lInput : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 112 x 112 x 32\>\lMin : 0.000000e+00\lMax : 6.000000e+00\lusers : 1\lResult : i8[S:0.0625 O:0][-8.000,7.938]\<1 x 112 x 112 x 32\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Wheat1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2[
+	label = "{{<Input>Input|<Filter>Filter|<Bias>Bias}|{Convolution\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2\lInput : i8[S:0.0156 O:0][-2.000,1.984]\<1 x 224 x 224 x 3\>\lFilter : i8[S:0.0312 O:0][-4.000,3.969]\<32 x 3 x 3 x 3\>\lBias : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<32\>\lKernels : [3, 3]\lStrides : [2, 2]\lPads : [0, 0, 1, 1]\lGroup : 1\lDilation : [1, 1]\lLayout : NHWC\lFusedActivation : NONE\lusers : 1\lResult : i8[S:0.2500 O:0][-32.000,31.750]\<1 x 112 x 112 x 32\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Thistle1
+penwidth = 2];
+
+Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2_quantize[
+	label = "{{<Input>Input}|{Quantize\lname : Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2_quantize\lInput : float\<1 x 224 x 224 x 3\>\lusers : 1\lResult : i8[S:0.0156 O:0][-2.000,1.984]\<1 x 224 x 224 x 3\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=PeachPuff1
+penwidth = 2];
+
+input[
+	label = "{{Placeholder\lname : \"input\"\llayout : *\loutput : float\<1 x 224 x 224 x 3\>\ltrainable : 0\lstatic : 0\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=MistyRose1
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_0_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_0_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<32 x 3 x 3 x 3\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__27[
+	label = "{{Constant\lname : \"conv_bias__27\"\llayout : *\loutput : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<32\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.5000 O:0][-64.000,63.500]\<32 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias[
+	label = "{{Constant\lname : \"conv_bias\"\llayout : *\loutput : i32[S:0.0312 O:0][-67108864.000,67108864.000]\<32\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0625 O:0][-8.000,7.938]\<64 x 1 x 1 x 32\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__28[
+	label = "{{Constant\lname : \"conv_bias__28\"\llayout : *\loutput : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<64\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.5000 O:0][-64.000,63.500]\<64 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__2[
+	label = "{{Constant\lname : \"conv_bias__2\"\llayout : *\loutput : i32[S:0.0312 O:0][-67108864.000,67108864.000]\<64\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<128 x 1 x 1 x 64\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__29[
+	label = "{{Constant\lname : \"conv_bias__29\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<128\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.1250 O:0][-16.000,15.875]\<128 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__30[
+	label = "{{Constant\lname : \"conv_bias__30\"\llayout : *\loutput : i32[S:0.0078 O:0][-16777216.000,16777216.000]\<128\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<128 x 1 x 1 x 128\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__31[
+	label = "{{Constant\lname : \"conv_bias__31\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<128\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<128 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__4[
+	label = "{{Constant\lname : \"conv_bias__4\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<128\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<256 x 1 x 1 x 128\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__32[
+	label = "{{Constant\lname : \"conv_bias__32\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<256\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0625 O:0][-8.000,7.938]\<256 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__33[
+	label = "{{Constant\lname : \"conv_bias__33\"\llayout : *\loutput : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<256\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0078 O:0][-1.000,0.992]\<256 x 1 x 1 x 256\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__34[
+	label = "{{Constant\lname : \"conv_bias__34\"\llayout : *\loutput : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<256\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<256 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__8[
+	label = "{{Constant\lname : \"conv_bias__8\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<256\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 1 x 1 x 256\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__35[
+	label = "{{Constant\lname : \"conv_bias__35\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0625 O:0][-8.000,7.938]\<512 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__36[
+	label = "{{Constant\lname : \"conv_bias__36\"\llayout : *\loutput : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0078 O:0][-1.000,0.992]\<512 x 1 x 1 x 512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__37[
+	label = "{{Constant\lname : \"conv_bias__37\"\llayout : *\loutput : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0625 O:0][-8.000,7.938]\<512 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__38[
+	label = "{{Constant\lname : \"conv_bias__38\"\llayout : *\loutput : i32[S:0.0039 O:0][-8388608.000,8388608.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0078 O:0][-1.000,0.992]\<512 x 1 x 1 x 512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__39[
+	label = "{{Constant\lname : \"conv_bias__39\"\llayout : *\loutput : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<512 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__40[
+	label = "{{Constant\lname : \"conv_bias__40\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 1 x 1 x 512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__41[
+	label = "{{Constant\lname : \"conv_bias__41\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<512 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__42[
+	label = "{{Constant\lname : \"conv_bias__42\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 1 x 1 x 512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__43[
+	label = "{{Constant\lname : \"conv_bias__43\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<512 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__44[
+	label = "{{Constant\lname : \"conv_bias__44\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0078 O:0][-1.000,0.992]\<512 x 1 x 1 x 512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__45[
+	label = "{{Constant\lname : \"conv_bias__45\"\llayout : *\loutput : i32[S:0.0005 O:0][-1048576.000,1048576.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<512 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__12[
+	label = "{{Constant\lname : \"conv_bias__12\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0156 O:0][-2.000,1.984]\<1024 x 1 x 1 x 512\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__46[
+	label = "{{Constant\lname : \"conv_bias__46\"\llayout : *\loutput : i32[S:0.0010 O:0][-2097152.000,2097152.000]\<1024\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise_weight__1\"\llayout : NHWC\loutput : i8[S:0.2500 O:0][-32.000,31.750]\<1024 x 3 x 3 x 1\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__47[
+	label = "{{Constant\lname : \"conv_bias__47\"\llayout : *\loutput : i32[S:0.0156 O:0][-33554432.000,33554432.000]\<1024\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D_weight__1[
+	label = "{{Constant\lname : \"MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D_weight__1\"\llayout : NHWC\loutput : i8[S:0.0312 O:0][-4.000,3.969]\<1024 x 1 x 1 x 1024\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+conv_bias__24[
+	label = "{{Constant\lname : \"conv_bias__24\"\llayout : *\loutput : i32[S:0.0020 O:0][-4194304.000,4194304.000]\<1024\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_TransposeWeights__4_constfold[
+	label = "{{Constant\lname : \"Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_TransposeWeights__4_constfold\"\llayout : *\loutput : float\<1024 x 1001\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D_bias[
+	label = "{{Constant\lname : \"MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D_bias\"\llayout : *\loutput : float\<1001\>\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Snow3 color=DeepSkyBlue4
+penwidth = 2];
+
+Softmax_output_selected[
+	label = "{{Splat\lname : Softmax_output_selected\lValue : 0.000000e+00\lusers : 1\lResult : index32\<1 x 1\>\l}|{<Result>Result}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=Khaki1
+penwidth = 2];
+
+output[
+	label = "{{Placeholder\lname : \"output\"\llayout : *\loutput : float\<1 x 1001\>\ltrainable : 0\lstatic : 0\lusers : 1\l}|{<Output>Output}}"
+	shape = "record"
+	style="filled,rounded"
+	fillcolor=MistyRose1
+penwidth = 2];
+
+Softmax_output_selected:Result -> Softmax_output:Selected;
+MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2:Filter;
+conv_bias__47:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2:Filter;
+conv_bias__46:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2:Bias;
+conv_bias__12:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2:Filter;
+MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2:Filter;
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_TransposeWeights__4_constfold:Output -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_dot:RHS;
+conv_bias__44:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2:Filter;
+conv_bias__43:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2:Filter;
+conv_bias__41:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2:Filter;
+conv_bias__40:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2:Filter;
+conv_bias__38:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2:Filter;
+Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2:Input;
+MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2:Filter;
+Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_bias:Result -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeOutput:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2:Input;
+conv_bias__30:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2:Filter;
+Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2:Input;
+MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D_bias:Output -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_bias:Slice;
+Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2:Input;
+conv_bias__4:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2:Bias;
+conv_bias__45:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2:Bias;
+conv_bias__27:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_10_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2:Input;
+MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2:Filter;
+Clip_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_depthwise__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2:Input;
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput:Result -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput_dequantize:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Relu6__1:Input;
+AveragePool_MobilenetV1_Logits_AvgPool_1a_AvgPool__1:Result -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_9_pointwise_Conv2D__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2:Input;
+MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2:Filter;
+Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2:Filter;
+Reshape_MobilenetV1_Predictions_Reshape__1_dequantize:Result -> Softmax_output:Input;
+conv_bias__39:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2:Bias;
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_dot:Result -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_bias:Batch;
+conv_bias__29:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2:Filter;
+Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Relu6__1:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_13_depthwise_Relu6__1:Input;
+Softmax_output:Result -> output_save:Input;
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeOutput:Result -> Reshape_MobilenetV1_Predictions_Reshape__1_quantize:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_9_depthwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2:Filter;
+Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_12_pointwise_Conv2D__2:Filter;
+Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_Relu6__1:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_11_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_12_depthwise_depthwise__2:Input;
+Reshape_MobilenetV1_Predictions_Reshape__1_quantize:Result -> Reshape_MobilenetV1_Predictions_Reshape__1:Input;
+conv_bias__42:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_10_depthwise_depthwise__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_11_depthwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2:Filter;
+Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2:Input;
+MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2:Filter;
+Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Relu6__1:Input;
+conv_bias__33:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2:Bias;
+Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2:Input;
+output:Output -> output_save:Output [dir="both"];
+Conv_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_3_depthwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2:Filter;
+Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_2_pointwise_Conv2D__2:Input;
+conv_bias__8:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_6_depthwise_depthwise__2:Bias;
+Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2:Input;
+conv_bias__24:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Conv2D__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_Relu6__1:Input;
+Reshape_MobilenetV1_Predictions_Reshape__1:Result -> Reshape_MobilenetV1_Predictions_Reshape__1_dequantize:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_0_Relu6__1:Input;
+conv_bias__35:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_6_pointwise_Conv2D__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2_quantize:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2:Input;
+Clip_MobilenetV1_MobilenetV1_Conv2d_13_pointwise_Relu6__1:Result -> AveragePool_MobilenetV1_Logits_AvgPool_1a_AvgPool__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_0_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2:Filter;
+Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__2_ReshapeInput_dequantize:Result -> Conv_MobilenetV1_Logits_Conv2d_1c_1x1_Conv2D__6_dot:LHS;
+MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2:Filter;
+conv_bias:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_1_depthwise_depthwise__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_Relu6__1:Input;
+Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_Relu6__1:Input;
+conv_bias__28:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_1_pointwise_Conv2D__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2:Filter;
+conv_bias__2:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_2_depthwise_depthwise__2:Bias;
+Clip_MobilenetV1_MobilenetV1_Conv2d_8_depthwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_8_pointwise_Conv2D__2:Input;
+MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2:Filter;
+conv_bias__31:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Conv2D__2:Bias;
+Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_Relu6__1:Input;
+MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2:Filter;
+conv_bias__32:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_4_pointwise_Conv2D__2:Bias;
+MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2:Filter;
+conv_bias__34:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_5_pointwise_Conv2D__2:Bias;
+Clip_MobilenetV1_MobilenetV1_Conv2d_3_pointwise_Relu6__1:Result -> Conv_MobilenetV1_MobilenetV1_Conv2d_4_depthwise_depthwise__2:Input;
+MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise_weight__1:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2:Filter;
+Conv_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_depthwise__2:Result -> Clip_MobilenetV1_MobilenetV1_Conv2d_5_depthwise_Relu6__1:Input;
+input:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_0_Conv2D__2_quantize:Input;
+conv_bias__36:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_7_depthwise_depthwise__2:Bias;
+conv_bias__37:Output -> Conv_MobilenetV1_MobilenetV1_Conv2d_7_pointwise_Conv2D__2:Bias;
+}
